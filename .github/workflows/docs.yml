@@ -28,6 +28,11 @@ jobs:
           # 缓存 pnpm 依赖
           cache: pnpm
 
+       - name: Setup pnpm
+        uses: softprops/setup-pnpm@v1
+        with:
+          version: 8.x
+          
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
 

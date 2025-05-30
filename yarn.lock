@@ -5767,11 +5767,6 @@
   dependencies:
     "find-up" "^4.0.0"
 
-"pnpm@^10.11.0":
-  "integrity" "sha512-ZUBYP0HMX2KOs9l3Ps7oAvT575kjzEW2mJD7R5kdSwkpZGlOw6T3OKQgyRijMwYsi5JdMS9C5PDCY+tgNVH5dw=="
-  "resolved" "https://registry.npmmirror.com/pnpm/-/pnpm-10.11.0.tgz"
-  "version" "10.11.0"
-
 "portfinder@^1.0.13", "portfinder@^1.0.26":
   "integrity" "sha512-Se+2isanIcEqf2XMHjyUKskczxbPH7dQnlMjXX6+dybayyHvAf/TCgyMRlzf/B6QDhAEFOGes0pzRo3by4AbMA=="
   "resolved" "https://registry.npmjs.org/portfinder/-/portfinder-1.0.28.tgz"
