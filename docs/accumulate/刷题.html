@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+    var x, y, z; //全局变量
+
+    // function outer_d1(s) {
+    //     var num = 25;
+
+    //     function inner1() {
+    //         console.log(s) //打印形参s
+    //         debugger
+    //     }
+    //     y = inner1;
+
+    //     function inner2() {
+    //         console.log("just console") //只做了简单的打印
+    //         debugger
+    //     }
+    //     inner2();
+
+    //     function inner3() {
+    //         console.log(num) //打印定义的num
+    //         debugger
+    //     }
+    //     return inner3
+    // }
+    // outer_d1("i am x");
+
+    function outer_d2(s) {
+        var num = 25;
+
+        function inner1() {
+            console.log(s) //打印形参s
+            debugger
+        }
+
+        function inner2() {
+            console.log("just console") //只做了简单的打印
+            debugger
+        }
+
+        function inner3() {
+            console.log(num) //打印定义的num
+            debugger
+        }
+
+        inner2();
+    }
+    outer_d2("i am y");
+
+    // function outer_d3(s) {
+    //     var num = 30;
+
+    //     function inner1() {
+    //         console.log("just console") //只做了简单的打印
+    //         debugger
+    //     }
+    //     z = inner1;
+
+    //     function inner2() {
+    //         console.log("just console") //只做了简单的打印
+    //         debugger
+    //     }
+    //     inner2();
+
+    //     function inner3() {
+    //         console.log("just console") //只做了简单的打印
+    //         debugger
+    //     }
+    //     return inner3
+    // }
+    // outer_d3("i am z")();
+    // z();
+</script>
+
+</html>

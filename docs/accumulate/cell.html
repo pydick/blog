@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./cell.js"></script>
+    <script>
+        const probilty = (p) => {
+            let alivepro;
+            if (p < 0.5) {
+                alivepro = 0;
+            } else {
+                alivepro = (2 * p - 1) / p;
+            }
+            return alivepro;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

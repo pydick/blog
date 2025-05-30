@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.js"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        const probiltyfn = (p) => {
+            let alivepro;
+            if (p < 0.5) {
+                alivepro = 0;
+            } else {
+                alivepro = (2 * p - 1) / p;
+            }
+            return alivepro;
+        }
+        const xArr = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9];
+        const yArr = xArr.map((i) => probiltyfn(i));
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'bota cell'
+            },
+            tooltip: {},
+            legend: {
+                data: ['阿米巴']
+            },
+            grid: {
+                left: 30,
+                right: 200,
+                "containLabel": true
+            },
+            xAxis: {
+                type: 'category',
+                data: xArr,
+                interval: 0.1,
+                name: "每次分裂存活概率",
+                nameRotate: '-0.5',
+                a
+            },
+            yAxis: {
+                type: 'value',
+                name: "无限存活概率"
+            },
+            series: [{
+                data: yArr,
+                type: 'line',
+                smooth: true
+            }]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
