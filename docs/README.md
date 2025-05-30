@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /profession.jpg
+heroImage: /favicon3.png
 actionText: 进入→
 actionLink: /accumulate/
 features:
