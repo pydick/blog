@@ -19,6 +19,8 @@ jobs:
 
       - name: 设置 pnpm
         uses: pnpm/action-setup@v4
+        with:
+          version: 8.x
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
@@ -27,18 +29,13 @@ jobs:
           node-version: 22
           # 缓存 pnpm 依赖
           cache: pnpm
-
-       - name: Setup pnpm
-        uses: softprops/setup-pnpm@v1
-        with:
-          version: 8.x
           
       - name: 安装依赖
         run: pnpm install --frozen-lockfile
 
       # 运行构建脚本
       - name: 构建 VuePress 站点
-        run: pnpm docs:build
+        run: pnpm deploy
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
